@@ -8,32 +8,33 @@
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="VTgpuZaE"></script>
 
+            
+        {% if title == 'Home' %}
+            <div class="hero-wrapper">
+                <div class="hero-image" style="background-image: url(/static/img/circadian-riff-banner-1.jpg)"></div>
+                {# <div class="hero-logo" style="background-image: url({{ metadata.logo_stacked }}); background-size: 400px;"></div> #}
+            </div>
+        {% endif %}
+
+        {% if page.inputPath | startswithposts %}
+            <div class="hero-wrapper">
+                <div class="hero-image" style="background-image: url({{ image }})"></div>
+                {# <div class="hero-logo" style="background-image: url({{ metadata.logo_stacked }}); background-size: 400px;"></div> #}
+            </div>
+        {% endif %}
+
         <header class="site-header">
             <div class="nav-background">
                 <div class="nav-wrapper">
-                    <h1 class="site-title">
+                    {# <h1 class="site-title">
                         <a href="{{ '/' | url }}"><img src="{{ metadata.logo }}" height="80"></a>
-                    </h1>
+                    </h1> #}
                     {# <div class="header-phone">
                         <a href="{{ metadata.phone_link }}">Call {{ metadata.phone }}</a>
                     </div> #}
                     {% include "components/nav.njk" %}
                 </div>
             </div>
-            
-            {% if title == 'Home' %}
-                <div class="hero-wrapper">
-                    <div class="hero-image" style="background-image: url(/static/img/circadian-riff-banner-1.jpg)"></div>
-                    {# <div class="hero-logo" style="background-image: url({{ metadata.logo_stacked }}); background-size: 400px;"></div> #}
-                </div>
-            {% endif %}
-
-            {% if page.inputPath | startswithposts %}
-                <div class="hero-wrapper">
-                    <div class="hero-image" style="background-image: url({{ image }})"></div>
-                    {# <div class="hero-logo" style="background-image: url({{ metadata.logo_stacked }}); background-size: 400px;"></div> #}
-                </div>
-            {% endif %}
 
         </header>
 
@@ -44,15 +45,12 @@
                 </div>
                 <div class="sec-col">
 
-                    {# <h2>Follow My Art</h2> #}
-                    {# <div class="footer-social-icons">
-                        <a class="footer-social-icon" href="https://www.facebook.com/circadian-riff/" target="_blank"><img src="/static/img/icons/facebook_90x90.png" alt="Follow {{ site.title }} on Facebook"></a>
-                        <a class="footer-social-icon" href="https://www.instagram.com/circadian-riff/" target="_blank"><img src="/static/img/icons/instagram_90x90.png" alt="Follow {{ site.title }} on Instagram"></a> #}
-                    </div>
-                    
-                    {# {% if title != 'News & Updates' %}
-                        {% include "components/featured-blog.njk" %}
-                    {% endif %} #}
+                    <section class="art-grid">
+                        {% for post in collections.post %}
+                            <a class="art-grid-item" href="{{ post.url | url }}" style="background-image: url({{ post.data.image }}); background-position: center; background-sizing: cover;"></a>
+                        {% endfor %}
+                    </section>
+
                 </div>
             </div>
         </main>
