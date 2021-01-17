@@ -1,0 +1,14 @@
+{
+  "title": "Circadian Riff",
+  "url": "https://circadian-riff.com",
+  "logo": "/static/img/circadian-riff-logo.png",
+  "logo_stacked": "/static/img/circadian-riff-logo-stacked.png",
+  "links" : {
+    "soundcloud": "https://soundcloud.com/circadian-riff",
+    "facebook": "https://soundcloud.com/Circadian.Riff",
+    "instagram": "https://www.instagram.com/circadian_riff/",
+    "beatport": "https://www.beatport.com/artist/circadian-riff/605186",
+    "spotify": "https://open.spotify.com/artist/0voOwYwB2Y4kg95JCAAJBr",
+    "audius": "https://audius.co/Circadian_Riff"
+  }
+}
