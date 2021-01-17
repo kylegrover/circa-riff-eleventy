@@ -1,5 +1,5 @@
 :root {
-	--primary: #c11;
+	--primary: #4a3e53;
 	--secondary: white;
 	--accent: rgb(38, 92, 240);
 	--background: #000;
@@ -413,7 +413,7 @@ button {
 	/* background-image: url('/static/img/mossy-tree-banner-1.jpg'); */
 	background-size: cover;
 	background-position: center;
-    background: #111;
+    background: var(--primary);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     /* background: linear-gradient(0deg, white, #ddd); */
 }
