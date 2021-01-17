@@ -1,10 +1,10 @@
 ---
 layout: layouts/blog.njk
-title: Art by Kevin Singleton
+title: Releases by Circadian Riff
 date: 2017-01-01
-permalink: /gallery/index.html
+permalink: /music/index.html
 eleventyNavigation:
-  key: Gallery
+  key: Releases
   order: 2
 published: false
 ---
