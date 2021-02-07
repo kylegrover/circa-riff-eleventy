@@ -234,6 +234,7 @@ header nav li a[data-current="current item"] {
     max-width: 100%;
     position: relative;
     height: calc(56.25vw - 20px);
+    max-height: 50vh;
     background-size: cover;
 }
 /* @media (max-width: 768px) {
