@@ -457,6 +457,9 @@ button {
 	
 }
 
+.site-main {
+	min-height: calc(100vh - 216px);
+}
 .site-main img {
     max-width: 100%;
     margin: 5px auto;
