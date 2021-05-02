@@ -33,8 +33,7 @@
                         <a href="{{ metadata.phone_link }}">Call {{ metadata.phone }}</a>
                     </div> #}
                     {% include "components/nav.njk" %}
-                    <a class="header-social-icon" href="{{ links.facebook }}" target="_blank"><img src="/static/img/icons/facebook_90x90.png" alt="Follow ASSERT on Facebook" width="40"></a>
-                    <a class="header-social-icon" href="{{ links.instagram }}" target="_blank"><img src="/static/img/icons/instagram_90x90.png" alt="Follow ASSERT on Instagram" width="40"></a>
+                    {% include "components/social-links.njk" %}
                 </div>
             </div>
 
